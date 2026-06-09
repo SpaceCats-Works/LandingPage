@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpaceCatsWorks</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Splash Center Alignment for Fallback */
+    .splash-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 2rem;
+    }
+    .splash-logo {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 2rem;
+      border-radius: 50%;
+      border: 2px solid var(--border-glass);
+      box-shadow: 0 0 20px rgba(161, 84, 255, 0.3);
+    }
+    .splash-buttons {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 480px) {
+      .splash-buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 280px;
+      }
+    }
+  </style>
+  <script>
+    // Automatic redirection based on browser language
+    (function() {
+      try {
+        const lang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+        if (lang.startsWith('ja')) {
+          window.location.replace('./ja/index.html');
+        } else {
+          window.location.replace('./en/index.html');
+        }
+      } catch (e) {
+        console.error("Redirection failed:", e);
+      }
+    })();
+  </script>
+</head>
+<body>
+  <div class="splash-container">
+    <img src="assets/images/logo.png" alt="SpaceCatsWorks Logo" class="splash-logo">
+    <h1>SpaceCatsWorks</h1>
+    <p style="color: var(--text-muted); max-width: 500px; margin: 0 auto 1.5rem;">
+      Select language / 言語を選択してください。<br>
+      (If you are not redirected automatically, please select below.)
+    </p>
+    <div class="splash-buttons">
+      <a href="./ja/index.html" class="btn btn-primary">日本語 (Japanese)</a>
+      <a href="./en/index.html" class="btn btn-secondary">English</a>
+    </div>
+  </div>
+</body>
+</html>
