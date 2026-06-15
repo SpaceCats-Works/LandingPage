@@ -31,6 +31,16 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      - name: Inject repository variables into HTML
+        env:
+          CONTACT_EMAIL: ${{ vars.CONTACT_EMAIL }}
+          SITE_URL: ${{ vars.SITE_URL }}
+        run: |
+          find . -name "*.html" -exec sed -i \
+            -e "s|{{CONTACT_EMAIL}}|${CONTACT_EMAIL}|g" \
+            -e "s|{{SITE_URL}}|${SITE_URL}|g" \
+            {} +
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

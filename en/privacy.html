@@ -35,43 +35,139 @@
   <main>
     <section class="legal-content">
       <h1>Privacy Policy</h1>
-      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem;">Last Updated: June 9, 2026</p>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem;">Last Updated: June 15, 2026</p>
 
       <p>
-        SpaceCatsWorks ("we", "our", or "us") manages the mobile applications and official website (collectively referred to as the "Service"). We are committed to protecting the privacy of our users. This Privacy Policy details how we handle information.
+        SpaceCatsWorks ("we", "our", or "us") operates mobile applications, PC software, XR applications, and an official website (collectively the "Service"). We are committed to protecting user privacy. This Privacy Policy explains what information we handle, how we use it, and your choices regarding it.
       </p>
 
-      <h3>1. Data Collection and Usage</h3>
+      <h3>1. Developer Information</h3>
+      <p>
+        Name: SpaceCatsWorks<br>
+        Entity Type: Sole Proprietorship (個人事業)<br>
+        Location: Tokyo, Japan (details provided on verification request)<br>
+        Contact: Please use the contact form at <a href="{{SITE_URL}}" target="_blank" rel="noopener noreferrer">{{SITE_URL}}</a>
+      </p>
+
+      <h3>2. Types of Information We Collect and Purpose</h3>
       <p>We handle information in the following contexts:</p>
       <ul>
-        <li><strong>Inquiries:</strong> Any personal details (name, email address, message body) submitted via our contact forms are processed strictly to answer and resolve your inquiries.</li>
-        <li><strong>Applications (Apps):</strong> We do not directly collect, harvest, transmit, or store personal user information in any applications released by SpaceCatsWorks.</li>
+        <li>
+          <strong>Contact Form:</strong>
+          We collect names, email addresses, and message contents submitted through our contact form. This information is used solely to respond to your inquiry and is not used for any other purpose.
+        </li>
+        <li>
+          <strong>Applications (iOS / Android / PC / XR):</strong>
+          Apps released by SpaceCatsWorks do not directly collect, store, or transmit personally identifiable information (such as name, address, or email) from users.
+        </li>
+        <li>
+          <strong>Website:</strong>
+          We may use services such as Google Analytics to collect anonymous access logs for site improvement purposes.
+        </li>
       </ul>
 
-      <h3>2. Advertising and Analytics</h3>
+      <h3>3. Advertising and Analytics (Third-Party SDKs)</h3>
       <p>
-        We may integrate third-party developer SDKs (such as Google AdMob, Google Analytics, Unity Ads) to display ads or monitor aggregate usage metrics for app improvements. These third-party services may capture anonymous device IDs, cookies, or basic usage telemetry. No personally identifiable details are exposed. Please refer to their respective privacy terms for details.
+        The Service may integrate third-party SDKs and services for analytics and advertising purposes. These may collect anonymous identifiers (such as advertising IDs or cookies), device information, and usage telemetry. No personally identifiable information is collected or exposed through these SDKs.
+      </p>
+      <p>Examples of third-party services used (varies by app/service):</p>
+      <ul>
+        <li>Google AdMob (advertising)</li>
+        <li>Google Analytics / Firebase Analytics (usage analysis)</li>
+        <li>Unity Ads / Unity Analytics (advertising and analysis)</li>
+        <li>Meta Audience Network (advertising)</li>
+      </ul>
+      <p>Please refer to each provider's privacy policy for details on their data practices.</p>
+
+      <h3>4. Platform-Specific Data Handling</h3>
+
+      <h4 style="color: var(--primary-cyan); margin-top: 1.5rem;">4-1. Apple App Store (iOS / macOS / visionOS)</h4>
+      <p>
+        Apps published on Apple platforms comply with Apple's App Store Review Guidelines and the App Tracking Transparency (ATT) framework.
+      </p>
+      <ul>
+        <li>If we use the IDFA (Identifier for Advertisers) for advertising purposes, we will present an ATT prompt to request tracking permission from the user.</li>
+        <li>If the user declines tracking, we will not perform personalized ad targeting using their identifier.</li>
+        <li>We accurately declare all data types collected and used by each app in the App Store's Privacy Nutrition Labels.</li>
+        <li>For visionOS (Apple Vision Pro) apps, spatial sensor data (such as hand tracking and eye tracking) is processed locally by Apple's platform and is not transmitted to our servers.</li>
+        <li>If an app requires access to HealthKit, location, microphone, camera, or other sensitive resources, the purpose will be clearly stated within the app prior to requesting permission.</li>
+      </ul>
+
+      <h4 style="color: var(--primary-cyan); margin-top: 1.5rem;">4-2. Google Play Store (Android)</h4>
+      <p>
+        Android apps comply with Google's Data Safety requirements and the Google Play Developer Policy.
+      </p>
+      <ul>
+        <li>We accurately disclose data types collected, their purposes, and any third-party sharing in Google Play's Data Safety form for each app.</li>
+        <li>If advertising IDs are used, users can opt out of personalized advertising through their device settings (Google &gt; Ads &gt; Delete advertising ID or opt out).</li>
+        <li>Sensitive permissions (location, camera, microphone, etc.) are requested only when required for a specific feature, and the purpose is explained within the app.</li>
+        <li>Apps targeting families or children comply with Google Play's Families Policy and applicable child privacy regulations.</li>
+      </ul>
+
+      <h4 style="color: var(--primary-cyan); margin-top: 1.5rem;">4-3. Steam / PC (Windows · macOS · Linux)</h4>
+      <p>
+        PC games and software comply with Valve's Steam store policies and distribution requirements.
+      </p>
+      <ul>
+        <li>When using the Steamworks SDK, Steam IDs are used for platform features such as achievements and cloud saves. These are managed by Valve and are not collected by us as personal information.</li>
+        <li>Anonymous crash reports or usage telemetry may be collected to improve the product; these are processed in a non-identifiable format.</li>
+        <li>The URL of this Privacy Policy is listed in the Privacy Policy field on each Steam store page.</li>
+      </ul>
+
+      <h4 style="color: var(--primary-cyan); margin-top: 1.5rem;">4-4. Meta Quest (VR / XR)</h4>
+      <p>
+        Meta Quest apps comply with Meta's Developer Policies and Oculus Platform policies.
+      </p>
+      <ul>
+        <li>Spatial sensor data generated by room-scale mapping, hand tracking, eye tracking, and similar features is processed locally on-device by Meta's platform. Raw sensor data is not transmitted to our servers.</li>
+        <li>If Meta Audience Network is used for advertising, Meta's data processing terms apply.</li>
+        <li>App privacy practices are disclosed accurately in the Meta Quest Developer Hub data use checklist for each submitted app.</li>
+        <li>Social features (multiplayer, friend lists, etc.) operate through Meta's platform services. We do not manage personally identifiable user data related to social functionality.</li>
+      </ul>
+
+      <h3>5. Cookies and Tracking Technologies</h3>
+      <p>
+        Our website may use cookies provided by Google Analytics for access analysis. These cookies collect anonymous information such as browser session data and referral URLs to help us improve the Service. You can disable cookies through your browser settings; however, some features of the Service may not function correctly as a result.
       </p>
 
-      <h3>3. Third-Party Sharing</h3>
-      <p>We do not sell, rent, trade, or share user data with third parties unless required to comply with Japanese laws or other official legal mandates.</p>
-
-      <h3>4. Legal Compliance</h3>
-      <p>We comply with all relevant Japanese privacy guidelines, regulations, and associated operational standards.</p>
-
-      <h3>5. Disclaimer</h3>
+      <h3>6. Third-Party Sharing</h3>
       <p>
-        We provide the Service on an "as is" and "as available" basis without warranties of any kind. We are not liable for any damages, data losses, or operational failures arising from your use of the Service.
+        We do not sell, rent, trade, or share user data with third parties except in the following circumstances:
+      </p>
+      <ul>
+        <li>When disclosure is required by applicable law or legal process</li>
+        <li>When necessary to protect the life, body, or property of an individual</li>
+        <li>When required for public health improvement or the sound development of children</li>
+      </ul>
+
+      <h3>7. Data Storage and Security</h3>
+      <p>
+        Personal information collected through the contact form is retained for a reasonable period (up to one year) after the inquiry is resolved, and is then securely deleted. We implement appropriate technical and organizational measures to prevent unauthorized access, loss, alteration, and leakage of personal information.
       </p>
 
-      <h3>6. Policy Modifications</h3>
+      <h3>8. Children's Privacy</h3>
       <p>
-        We reserve the right to modify this Privacy Policy at our discretion. Any revisions are effective immediately upon being published on this page of the website.
+        The Service is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that personal information from a child under 13 has been collected, we will delete it promptly. Parents or guardians with concerns may contact us through the <a href="contact.html">Contact Page</a>.
       </p>
 
-      <h3>7. Contact Information</h3>
+      <h3>9. Legal Compliance</h3>
       <p>
-        For inquiries regarding our Privacy Policy or data treatment, please contact us using the form located on our <a href="contact.html">Contact Page</a>.
+        We comply with Japan's Act on the Protection of Personal Information (個人情報保護法) and all other applicable Japanese privacy laws, as well as the privacy guidelines of each platform for which we develop software.
+      </p>
+
+      <h3>10. Disclaimer</h3>
+      <p>
+        We provide the Service on an "as is" and "as available" basis without warranties of any kind. We are not liable for any damages, data losses, or operational failures arising from your use of the Service. We are also not responsible for the content or privacy practices of third-party websites linked from this site.
+      </p>
+
+      <h3>11. Policy Modifications</h3>
+      <p>
+        We reserve the right to modify this Privacy Policy at our discretion. Any revisions are effective immediately upon being published on this page. The "Last Updated" date at the top of this page will be updated to reflect any significant changes.
+      </p>
+
+      <h3>12. Contact</h3>
+      <p>
+        For inquiries regarding this Privacy Policy, your personal data, or requests to delete your information, please contact us through the form on our <a href="contact.html">Contact Page</a>.
       </p>
     </section>
   </main>
