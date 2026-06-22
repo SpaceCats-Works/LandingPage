@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="SpaceCatsWorksへのお問い合わせページです。Googleフォームよりお問い合わせいただけます。">
+  <meta name="description" content="SpaceCatsWorksへのお問い合わせページです。バグ報告・機能要望・その他のお問い合わせ窓口をご用意しています。">
   <title>お問い合わせ | SpaceCatsWorks</title>
   <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/config.js"></script>
   <script src="../assets/js/main.js" defer></script>
 </head>
 <body>
@@ -33,23 +34,55 @@
 
   <!-- Main Content -->
   <main>
-    <section style="max-width: 800px; margin: 0 auto; text-align: center; padding: 2rem 0;">
+    <section style="max-width: 800px; margin: 0 auto; padding: 2rem 0;">
       <h1>Contact Us</h1>
       <p style="color: var(--text-muted); margin-bottom: 3rem;">
-        SpaceCatsWorks（スペースキャッツワークス）へのお問い合わせ・ご質問は、下記の外部Googleフォームより受け付けております。
+        お問い合わせ内容に応じて、以下の窓口をご利用ください。
       </p>
 
-      <div class="card" style="background: var(--bg-glass-hover); border-color: var(--border-glass-hover); padding: 3rem 2rem;">
-        <div class="card-icon" style="font-size: 3rem; margin-bottom: 1.5rem;">✉️</div>
-        <h3 style="margin-bottom: 1rem; color: #fff;">お問い合わせフォームを開く</h3>
-        <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 0.95rem;">
-          ボタンをクリックすると、Googleフォームのお問い合わせ用入力画面（外部サイト）が新しいタブで開きます。<br>
-          通常、数営業日以内に折り返しご連絡差し上げます。
-        </p>
-        <!-- Placeholders for external google form link, user can replace the href later -->
-        <a href="https://forms.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2.5rem;">
-          Googleフォームで連絡する &nearrow;
-        </a>
+      <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+        <!-- Bug Report -->
+        <div class="card" style="background: var(--bg-glass-hover); border-color: var(--border-glass-hover); padding: 2rem;">
+          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+            <div style="font-size: 2rem;">🐛</div>
+            <h3 style="margin: 0; color: #fff;">バグ報告</h3>
+          </div>
+          <p style="color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.95rem;">
+            アプリ・ツールの不具合や動作異常を発見した場合はこちらからご報告ください。
+          </p>
+          <a id="form-bug" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            バグ報告フォームを開く &nearrow;
+          </a>
+        </div>
+
+        <!-- Feature Request -->
+        <div class="card" style="background: var(--bg-glass-hover); border-color: var(--border-glass-hover); padding: 2rem;">
+          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+            <div style="font-size: 2rem;">💡</div>
+            <h3 style="margin: 0; color: #fff;">機能要望</h3>
+          </div>
+          <p style="color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.95rem;">
+            新機能のアイデアや改善提案がある場合はこちらからお送りください。
+          </p>
+          <a id="form-feature" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            機能要望フォームを開く &nearrow;
+          </a>
+        </div>
+
+        <!-- General Contact -->
+        <div class="card" style="background: var(--bg-glass-hover); border-color: var(--border-glass-hover); padding: 2rem;">
+          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+            <div style="font-size: 2rem;">✉️</div>
+            <h3 style="margin: 0; color: #fff;">その他のお問い合わせ</h3>
+          </div>
+          <p style="color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.95rem;">
+            上記以外のご質問・ご相談はメールにてお気軽にご連絡ください。<br>
+            通常、数営業日以内に折り返しご連絡差し上げます。
+          </p>
+          <a class="contact-email btn btn-secondary" href="mailto:contact@spacecats-works.dev">
+            contact@spacecats-works.dev
+          </a>
+        </div>
       </div>
 
       <div style="margin-top: 3rem; text-align: left; padding: 0 1.5rem;">
@@ -73,6 +106,14 @@
         <li><a href="contact.html">お問い合わせ</a></li>
         <li><a href="privacy.html">プライバシーポリシー</a></li>
       </ul>
+      <div class="footer-social">
+        <a href="#" id="social-youtube" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+        <a href="#" id="social-twitter" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+      </div>
       <div class="copyright">
         &copy; 2026 SpaceCatsWorks. All rights reserved.
       </div>

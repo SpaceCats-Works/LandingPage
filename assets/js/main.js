@@ -69,4 +69,24 @@ document.addEventListener('DOMContentLoaded', () => {
       link.classList.add('active');
     }
   });
+
+  // Apply config values
+  if (typeof CONFIG !== 'undefined') {
+    const ytLink = document.getElementById('social-youtube');
+    if (ytLink && CONFIG.social.youtube) ytLink.href = CONFIG.social.youtube;
+
+    const twLink = document.getElementById('social-twitter');
+    if (twLink && CONFIG.social.twitter) twLink.href = CONFIG.social.twitter;
+
+    const bugForm = document.getElementById('form-bug');
+    if (bugForm && CONFIG.forms.bug) bugForm.href = CONFIG.forms.bug;
+
+    const featureForm = document.getElementById('form-feature');
+    if (featureForm && CONFIG.forms.feature) featureForm.href = CONFIG.forms.feature;
+
+    document.querySelectorAll('.contact-email').forEach(el => {
+      el.href = 'mailto:' + CONFIG.contact.email;
+      el.textContent = CONFIG.contact.email;
+    });
+  }
 });

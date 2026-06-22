@@ -611,6 +611,24 @@ footer {
   margin-top: 1rem;
 }
 
+.footer-social {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.footer-social a {
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  transition: var(--transition-smooth);
+}
+
+.footer-social a:hover {
+  color: #fff;
+  text-shadow: none;
+}
+
 /* Responsive CSS - Tablet */
 @media (max-width: 768px) {
   h1 {
