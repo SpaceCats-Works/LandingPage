@@ -72,6 +72,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Apply config values
   if (typeof CONFIG !== 'undefined') {
+    function getConfigValue(path) {
+      return path.split('.').reduce((o, k) => (o != null ? o[k] : undefined), CONFIG);
+    }
+
+    document.querySelectorAll('[data-config]').forEach(el => {
+      const val = getConfigValue(el.dataset.config);
+      if (val != null) el.textContent = val;
+    });
+
+    document.querySelectorAll('[data-config-html]').forEach(el => {
+      const val = getConfigValue(el.dataset.configHtml);
+      if (val != null) el.innerHTML = val;
+    });
+
+    if (CONFIG.org && CONFIG.org.name) {
+      document.title = document.title.replace(/SpaceCats Works/g, CONFIG.org.name);
+    }
+
     const ytLink = document.getElementById('social-youtube');
     if (ytLink && CONFIG.social.youtube) ytLink.href = CONFIG.social.youtube;
 
