@@ -43,9 +43,9 @@
       try {
         const lang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
         if (lang.startsWith('ja')) {
-          window.location.replace('./ja/index.html');
+          window.location.replace('./ja/products.html');
         } else {
-          window.location.replace('./en/index.html');
+          window.location.replace('./en/products.html');
         }
       } catch (e) {
         console.error("Redirection failed:", e);
@@ -62,8 +62,8 @@
       (If you are not redirected automatically, please select below.)
     </p>
     <div class="splash-buttons">
-      <a href="./ja/index.html" class="btn btn-primary">日本語 (Japanese)</a>
-      <a href="./en/index.html" class="btn btn-secondary">English</a>
+      <a href="./ja/products.html" class="btn btn-primary">日本語 (Japanese)</a>
+      <a href="./en/products.html" class="btn btn-secondary">English</a>
     </div>
   </div>
 </body>

@@ -70,6 +70,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // Scroll Reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  if (revealEls.length) {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => revealObserver.observe(el));
+  }
+
   // Genre Tab Switching
   const genreTabs = document.querySelectorAll('.genre-tab');
   const productCards = document.querySelectorAll('.product-card');

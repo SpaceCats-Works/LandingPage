@@ -529,6 +529,26 @@ main {
   color: var(--text-muted);
 }
 
+/* Scroll Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero Center variant (products page) */
+.hero-center {
+  justify-content: center;
+  min-height: 75vh;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 /* Genre Tab Switcher */
 .genre-tabs {
   display: flex;
