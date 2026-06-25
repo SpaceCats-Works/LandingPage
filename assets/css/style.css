@@ -529,6 +529,39 @@ main {
   color: var(--text-muted);
 }
 
+/* Genre Tab Switcher */
+.genre-tabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.genre-tab {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-glass);
+  border-radius: 20px;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 0.35rem 0.9rem;
+  transition: var(--transition-smooth);
+}
+
+.genre-tab:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--border-glass-hover);
+  color: #fff;
+}
+
+.genre-tab.active {
+  background: linear-gradient(135deg, rgba(0, 242, 254, 0.12), rgba(161, 84, 255, 0.12));
+  border-color: rgba(0, 242, 254, 0.45);
+  color: var(--primary-cyan);
+}
+
 /* Products Section Specifics */
 .coming-soon-badge {
   background: rgba(255, 170, 0, 0.1);

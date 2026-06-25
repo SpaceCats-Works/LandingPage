@@ -70,6 +70,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // Genre Tab Switching
+  const genreTabs = document.querySelectorAll('.genre-tab');
+  const productCards = document.querySelectorAll('.product-card');
+
+  if (genreTabs.length && productCards.length) {
+    genreTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        genreTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const genre = tab.dataset.genre;
+        productCards.forEach(card => {
+          card.style.display = (genre === 'all' || card.dataset.genre === genre) ? '' : 'none';
+        });
+      });
+    });
+  }
+
   // Apply config values
   if (typeof CONFIG !== 'undefined') {
     function getConfigValue(path) {

@@ -37,26 +37,15 @@
     <section>
       <h1>Products</h1>
 
-      <section style="margin-top: 3rem; margin-bottom: 3rem;">
-        <h2 style="text-align: center; display: block; margin-bottom: 2rem;">What We Focus On</h2>
-        <div class="card-grid">
-          <div class="card">
-            <div class="card-icon">🎮</div>
-            <h3 class="card-title">Indie Games</h3>
-          </div>
-          <div class="card">
-            <div class="card-icon">🛠️</div>
-            <h3 class="card-title">Creative Tools</h3>
-          </div>
-          <div class="card">
-            <div class="card-icon">🕶️</div>
-            <h3 class="card-title">XR / Spatial Computing</h3>
-          </div>
-        </div>
-      </section>
+      <div class="genre-tabs">
+        <button class="genre-tab active" data-genre="all">All</button>
+        <button class="genre-tab" data-genre="game">🎮 Indie Games</button>
+        <button class="genre-tab" data-genre="tool">🛠️ Creative Tools</button>
+        <button class="genre-tab" data-genre="xr">🕶️ XR</button>
+      </div>
 
       <div class="card-grid">
-        <div class="card">
+        <div class="card product-card" data-genre="game">
           <span class="coming-soon-badge">Coming Soon</span>
           <div class="card-icon">🚀</div>
           <h3 class="card-title">---</h3>

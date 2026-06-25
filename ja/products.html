@@ -37,26 +37,15 @@
     <section>
       <h1>Products</h1>
 
-      <section style="margin-top: 3rem; margin-bottom: 3rem;">
-        <h2 style="text-align: center; display: block; margin-bottom: 2rem;">開発への取り組み</h2>
-        <div class="card-grid">
-          <div class="card">
-            <div class="card-icon">🎮</div>
-            <h3 class="card-title">ゲーム開発</h3>
-          </div>
-          <div class="card">
-            <div class="card-icon">🛠️</div>
-            <h3 class="card-title">クリエイティブツール</h3>
-          </div>
-          <div class="card">
-            <div class="card-icon">🕶️</div>
-            <h3 class="card-title">XR / 空間コンピューティング</h3>
-          </div>
-        </div>
-      </section>
+      <div class="genre-tabs">
+        <button class="genre-tab active" data-genre="all">すべて</button>
+        <button class="genre-tab" data-genre="game">🎮 ゲーム開発</button>
+        <button class="genre-tab" data-genre="tool">🛠️ クリエイティブツール</button>
+        <button class="genre-tab" data-genre="xr">🕶️ XR</button>
+      </div>
 
       <div class="card-grid">
-        <div class="card">
+        <div class="card product-card" data-genre="game">
           <span class="coming-soon-badge">Coming Soon</span>
           <div class="card-icon">🚀</div>
           <h3 class="card-title">---</h3>
