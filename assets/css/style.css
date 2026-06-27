@@ -544,9 +544,9 @@ main {
 /* Hero Center variant (products page) */
 .hero-center {
   justify-content: center;
-  min-height: 75vh;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  min-height: 100vh;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 /* Genre Tab Switcher */
